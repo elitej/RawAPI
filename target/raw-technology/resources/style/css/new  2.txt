@@ -1,0 +1,5 @@
+select name from battles
+where year(date) not in (
+select distinct launched from ships
+)
+///////////////////////

@@ -1,0 +1,46 @@
+.rest-content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-top: 1px solid;
+}
+.prop > div {
+    display: inline-block;
+}
+.prop > .key {
+    font-size: 17px;
+    font-family: cursive;
+    color: #21385b;
+}
+.prop > .value {
+    font-size: 14px;
+    color: #505b6d;
+}
+.title a:hover >.name {
+    opacity: 0.6;
+}
+.title a > .name {
+    font-size: 30px;
+    color: #21385b;
+}
+
+.star-rating {
+    margin-top: 10px;
+}
+.star-rating>span>i {
+    font-size: 20px;
+    color: #d3c830;
+}
+
+.paging {
+    margin-top: 10px;
+}
+.pagination>li>a, .pagination>li>span {
+    background-color: transparent;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    
+}
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    background-color: #709fea;
+    border-color: #bad4ff;
+}

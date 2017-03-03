@@ -1,0 +1,40 @@
+.rating-content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-top: 1px solid;
+}
+
+.rating {
+    font-family: 'Space Mono', monospace;
+    padding-top : 60px;
+}
+.position {
+    font-size: 30px;
+    border: 2px solid;
+    border-radius: 25px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    color: white;
+    background-color: brown;
+}
+.ratio {    
+    padding-right: 20px;
+}
+.ratio>span {
+    font-size: 25px;
+    color: #fc7f32;
+    padding-left: 41px;
+}
+
+.title
+{
+    padding-top: 20px;
+}
+.title a > .name {
+    font-size: 20px;
+}
+
+.image > a:hover{
+    opacity: 0.6;
+}
