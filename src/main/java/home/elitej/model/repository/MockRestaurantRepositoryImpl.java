@@ -1,16 +1,14 @@
-package home.elitej.service;
+package home.elitej.model.repository;
 
-import home.elitej.model.Restaurant;
+import home.elitej.model.entity.Restaurant;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.SortedMap;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentSkipListMap;
 
 
-public class MockRestaurantServiceImpl implements RestaurantService {
+public class MockRestaurantRepositoryImpl implements RestaurantRepository {
 
     private final SortedMap<Integer, Restaurant> mockDb = new ConcurrentSkipListMap<>();
 
@@ -42,6 +40,8 @@ public class MockRestaurantServiceImpl implements RestaurantService {
 
     @Override
     public Restaurant selectById(int id) {
+        if (mockDb.containsKey(id))
+            return mockDb.get(id);
         return null;
     }
 
@@ -56,7 +56,7 @@ public class MockRestaurantServiceImpl implements RestaurantService {
     }
 
     @Override
-    public List<Restaurant> selectBunchRestaurant(int fromId, int num) {
-        return new ArrayList<Restaurant>(mockDb.subMap(fromId, fromId + num).values());
+    public List<Restaurant> selectOrderedBundle(int fromId, int num) {
+        return new ArrayList<>(mockDb.subMap(fromId, fromId + num).values());
     }
 }

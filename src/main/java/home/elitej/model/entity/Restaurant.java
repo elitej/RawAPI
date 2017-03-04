@@ -1,4 +1,5 @@
-package home.elitej.model;
+package home.elitej.model.entity;
+
 
 
 public class Restaurant extends BaseEntity {
@@ -12,6 +13,8 @@ public class Restaurant extends BaseEntity {
     private String workingHours;
 
     private String image;
+
+    private String description;
 
     public Restaurant() {
     }

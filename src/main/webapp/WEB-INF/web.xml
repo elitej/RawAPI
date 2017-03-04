@@ -5,14 +5,14 @@
          version="3.1">
 
   <!--Servlets-->
-  <servlet>
-    <servlet-name>defaultController</servlet-name>
-    <servlet-class>home.elitej.controller.HomeController</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>defaultController</servlet-name>
-    <url-pattern></url-pattern>
-  </servlet-mapping>
+  <!--<servlet>-->
+    <!--<servlet-name>defaultController</servlet-name>-->
+    <!--<servlet-class>home.elitej.controller.HomeController</servlet-class>-->
+  <!--</servlet>-->
+  <!--<servlet-mapping>-->
+    <!--<servlet-name>defaultController</servlet-name>-->
+    <!--<url-pattern></url-pattern>-->
+  <!--</servlet-mapping>-->
 
   <servlet>
     <servlet-name>homeController</servlet-name>
@@ -59,6 +59,37 @@
     <url-pattern>/rating</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>loginController</servlet-name>
+    <servlet-class>home.elitej.controller.LoginController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>loginController</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>registryController</servlet-name>
+    <servlet-class>home.elitej.controller.RegistrationController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>registryController</servlet-name>
+    <url-pattern>/registration</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>restInfoController</servlet-name>
+    <servlet-class>home.elitej.controller.RestaurantInfoController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>restInfoController</servlet-name>
+    <url-pattern>/restaurant-info/*</url-pattern>
+  </servlet-mapping>
+
   <!--Servlets-->
+
+  <welcome-file-list>
+    <welcome-file>views/home.jsp</welcome-file>
+  </welcome-file-list>
 
 </web-app>

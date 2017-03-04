@@ -1,4 +1,4 @@
-package home.elitej.model;
+package home.elitej.model.entity;
 
 public abstract class BaseEntity {
 

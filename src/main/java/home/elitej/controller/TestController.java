@@ -8,6 +8,6 @@ import java.io.IOException;
 public class TestController extends BaseController {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("/pages/test.jsp").forward(req, resp);
+        req.getRequestDispatcher("/views/test.jsp").forward(req, resp);
     }
 }

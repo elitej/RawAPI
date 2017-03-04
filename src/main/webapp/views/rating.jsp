@@ -6,18 +6,16 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Restaraunts</title>
-
-
-
+    <title>Restaurants</title>
 
     <!-- Bootstrap -->
     <link href="../resources/style/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="../resources/style/css/main3.0.css" rel="stylesheet">
-    <link href="../resources/style/css/restaraunts.css" rel="stylesheet">
+    <link href="../resources/style/css/restaurants.css" rel="stylesheet">
     <link href="../resources/style/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+    <link href="../resources/style/css/rating.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,8 +32,10 @@
                 <div class="h-panel clearfix">
                     <span  ><p class="nav-emblem">Restaurants.ru</p></span>
                     <nav class="h-nav h-auth pull-right">
-                        <a href="login.html"><span><i class="fa fa-sign-in" aria-hidden="true"></i></span>Вход</a>
-                        <a href="registration.html"><span><i class="fa fa-user-plus" aria-hidden="true"></i></span>Регистрация</a>
+                        <a href="${pageContext.request.contextPath}/login">
+                            <span><i class="fa fa-sign-in" aria-hidden="true"></i></span>Вход</a>
+                        <a href="${pageContext.request.contextPath}/registration">
+                            <span><i class="fa fa-user-plus" aria-hidden="true"></i></span>Регистрация</a>
                     </nav>
                 </div>
             </div>
@@ -50,10 +50,10 @@
                             <li>
                                 <a href="${pageContext.request.contextPath}/home">Главная</a>
                             </li>
-                            <li class="active">
-                                <a href="#">Рестораны</a>
-                            </li>
                             <li>
+                                <a href="${pageContext.request.contextPath}/restaurants">Рестораны</a>
+                            </li>
+                            <li class="active">
                                 <a href="${pageContext.request.contextPath}/rating">Рейтинг</a>
                             </li>
                         </ul>
@@ -71,45 +71,38 @@
         </div>
     </div>
 </header>
+
+
 <div class="content">
     <div class="container">
-        <c:forEach items="${restaurantList}" var="restaurant">
+        <c:forEach items="${restaurantList}" var="restaurant" varStatus="loop">
             <div class="row">
-                <div class="rest-content clearfix">
-                    <a href="#">
-                        <div class="image col-xs-5 pull-left">
-                            <img src="<c:url value = "upload_screen/?imageId=${restaurant.image}"/>" alt="" width="450px" height="250px">
+                <div class="rating-content clearfix">
+                    <div class="col-md-3 col-md-offset-2">
+                        <div class="row rating" >
+                            <span class="position pull-left">${loop.index + 1}</span>
+                            <div class="ratio pull-right">
+                                <span>4.4</span>
+                                <div class="star-rating">
+                                    <span><i class="fa fa-star" aria-hidden="true" title="4.4"></i></span>
+                                    <span><i class="fa fa-star" aria-hidden="true" title="4.4"></i></span>
+                                    <span><i class="fa fa-star" aria-hidden="true" title="4.4"></i></span>
+                                    <span><i class="fa fa-star" aria-hidden="true" title="4.4"></i></span>
+                                    <span><i class="fa fa-star-half-o" aria-hidden="true" title="4.4"></i></span>
+                                </div>
+                            </div>
                         </div>
-                    </a>
-                    <div class="title col-xs-3 pull-left">
-                        <a href="#">
-                            <div class="name">${restaurant.name}</div>
-                        </a>
-                        <div class="star-rating">
-                            <span><i class="fa fa-star" aria-hidden="true" title="3.43"></i></span>
-                            <span><i class="fa fa-star" aria-hidden="true" title="3.43"></i></span>
-                            <span><i class="fa fa-star" aria-hidden="true" title="3.43"></i></span>
-                            <span><i class="fa fa-star-half-o" aria-hidden="true" title="3.43"></i></span>
-                            <span><i class="fa fa-star-o" aria-hidden="true" title="3.43"></i></span>
+                        <div class="title">
+                            <a href="/restaurant-info/${restaurant.id}" class="name">
+                                <div class="name">${restaurant.name}</div>
+                            </a>
                         </div>
                     </div>
-                    <div class="props col-xs-4 pull-left" >
-                        <div class="prop">
-                            <div class="key">Кухня: </div>
-                            <div class="value">${restaurant.kitchen}</div>
-                        </div>
-                        <div class="prop">
-                            <div class="key">Время работы: </div>
-                            <div class="value">${restaurant.workingHours}</div>
-                        </div>
-                        <div class="prop">
-                            <div class="key">Адрес: </div>
-                            <div class="value">${restaurant.address}</div>
-                        </div>
-                        <div class="prop">
-                            <div class="key">Телефон: </div>
-                            <div class="value">${restaurant.phone}</div>
-                        </div>
+                    <div class="col-md-5 image pull-left">
+                        <a href="/restaurant-info/${restaurant.id}">
+                            <img src="<c:url value = "/upload_screen/${restaurant.image}"/>"
+                                 alt="" width="450px" height="250px">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -157,6 +150,7 @@
         </div>
     </div>
 </div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="../resources/javascript/js/bootstrap.min.js" type="text/javascript" ></script>
 </body>

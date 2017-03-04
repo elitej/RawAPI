@@ -30,8 +30,10 @@
                 <div class="h-panel clearfix">
                     <span><p class="nav-emblem">Restaurants.ru</p></span>
                     <nav class="h-nav h-auth pull-right">
-                        <a href="login.html"><span><i class="fa fa-sign-in" aria-hidden="true"></i></span>Вход</a>
-                        <a href="registration.html"><span><i class="fa fa-user-plus" aria-hidden="true"></i></span>Регистрация</a>
+                        <a href="${pageContext.request.contextPath}/login">
+                            <span><i class="fa fa-sign-in" aria-hidden="true"></i></span>Вход</a>
+                        <a href="${pageContext.request.contextPath}/registration">
+                            <span><i class="fa fa-user-plus" aria-hidden="true"></i></span>Регистрация</a>
                     </nav>
                 </div>
             </div>
@@ -44,7 +46,7 @@
                     <div class="col-md-8 col-sm-9  h-menu" >
                         <ul class="nav nav-pills">
                             <li class="active">
-                                <a href="#">Главная</a>
+                                <a href="${pageContext.request.contextPath}/home">Главная</a>
                             </li>
                             <li>
                                 <a href="${pageContext.request.contextPath}/restaurants">Рестораны</a>
@@ -67,15 +69,13 @@
         </div>
     </div>
 </header>
-
 <div class="container">
     <div class="row">
         <div class=".col-md-4 .col-md-offset-4">
-            <img src="<c:url value="/upload_screen/?imageId=test.jpg"/>" alt="" width="450px" height="250px">
+            <img src="<c:url value="/upload_screen/test.jpg"/>" alt="" width="450px" height="250px">
         </div>
     </div>
 </div>
-
 <div class="footer">
     <div class="footer-bottom">
         <div class="container">

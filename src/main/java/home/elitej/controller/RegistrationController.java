@@ -9,15 +9,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class HomeController extends BaseController {
-    private static final String PAGE_HOME = "home.jsp";
+public class RegistrationController extends BaseController {
+    private static final String PAGE_REGISTRY = "registration.jsp";
 
-    private static Logger logger = LoggerFactory.getLogger(HomeController.class);
+    private static Logger logger = LoggerFactory.getLogger(RegistrationController.class);
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        logger.debug("forwards request to the {}", PAGE_HOME);
-        RequestDispatcher dispatcher = req.getRequestDispatcher(FOLDER + PAGE_HOME);
+        logger.debug("forwards request to the {}", PAGE_REGISTRY);
+        RequestDispatcher dispatcher = req.getRequestDispatcher(FOLDER + PAGE_REGISTRY);
         dispatcher.forward(req, resp);
     }
 }
