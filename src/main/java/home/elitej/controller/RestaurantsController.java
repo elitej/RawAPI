@@ -2,8 +2,8 @@ package home.elitej.controller;
 
 import home.elitej.annotation.Inject;
 import home.elitej.model.entity.Restaurant;
-import home.elitej.controller.service.MockRestaurantServiceImpl;
-import home.elitej.controller.service.RestaurantService;
+import home.elitej.service.MockRestaurantServiceImpl;
+import home.elitej.service.RestaurantService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

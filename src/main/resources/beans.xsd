@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified"
+            attributeFormDefault="unqualified"
+            targetNamespace="beans.xsd">
+
+
+    <xsd:element name="beans">
+        <xsd:complexType>
+            <xsd:all>
+                <xsd:element name="controller">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="path" type="string"/>
+                            <xsd:element name="fully-qualified-class-name" type="string"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+
+                <xsd:element name="common-bean">
+                    <xsd:complexType>
+                        <xsd:element name="fully-qualified-class-name" type="string"/>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:all>
+        </xsd:complexType>
+    </xsd:element>
+
+
+    <xsd:complexType name="commonText">
+        <xsd:simpleContent>
+            <xsd:restriction base="token"/>
+        </xsd:simpleContent>
+    </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  xmlns="beans.xsd"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="beans.xsd">
+
+    <!--Controllers-->
+
+    <!--<controller>-->
+        <!--<path>/</path>-->
+        <!--<fully-qualified-class-name>home.elitej.controller.HomeController</fully-qualified-class-name>-->
+    <!--</controller>-->
+    <!--<controller>-->
+        <!--<path>/home</path>-->
+        <!--<fully-qualified-class-name>home.elitej.controller.HomeController</fully-qualified-class-name>-->
+    <!--</controller>-->
+    <!--<controller>-->
+        <!--<path>/upload_screen/*</path>-->
+        <!--<fully-qualified-class-name>home.elitej.controller.ImageController</fully-qualified-class-name>-->
+    <!--</controller>-->
+    <!--<controller>-->
+        <!--<path>/restaurants</path>-->
+        <!--<fully-qualified-class-name>home.elitej.controller.RestaurantsController</fully-qualified-class-name>-->
+    <!--</controller>-->
+    <!--<controller>-->
+        <!--<path>/rating</path>-->
+        <!--<fully-qualified-class-name>home.elitej.controller.RatingController</fully-qualified-class-name>-->
+    <!--</controller>-->
+    <!--<controller>-->
+        <!--<path>/login</path>-->
+        <!--<fully-qualified-class-name>home.elitej.controller.LoginController</fully-qualified-class-name>-->
+    <!--</controller>-->
+    <!--<controller>-->
+        <!--<path>/registration</path>-->
+        <!--<fully-qualified-class-name>home.elitej.controller.RestaurantsController</fully-qualified-class-name>-->
+    <!--</controller>-->
+    <!--<controller>-->
+        <!--<path>/restaurant-info/*</path>-->
+        <!--<fully-qualified-class-name>home.elitej.controller.RestaurantInfoController</fully-qualified-class-name>-->
+    <!--</controller>-->
+
+    <!--Common Beans-->
+
+    <common-bean>
+        <fully-qualified-class-name>home.elitej.service.MockRestaurantServiceImpl</fully-qualified-class-name>
+    </common-bean>
+    <common-bean>
+        <fully-qualified-class-name>home.elitej.repository.MockRestaurantRepositoryImpl</fully-qualified-class-name>
+    </common-bean>
+
+</beans>

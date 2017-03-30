@@ -1,4 +1,4 @@
-package home.elitej.model.repository;
+package home.elitej.repository;
 
 import home.elitej.model.entity.Restaurant;
 

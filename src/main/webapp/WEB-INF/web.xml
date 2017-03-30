@@ -86,6 +86,20 @@
     <url-pattern>/restaurant-info/*</url-pattern>
   </servlet-mapping>
 
+  <context-param>
+    <param-name>pathToXmlConfig</param-name>
+    <param-value>bean-config.xml</param-value>
+  </context-param>
+
+  <!--<servlet>-->
+    <!--<servlet-name>frontController</servlet-name>-->
+    <!--<servlet-class>home.elitej.controller.FrontController</servlet-class>-->
+  <!--</servlet>-->
+  <!--<servlet-mapping>-->
+    <!--<servlet-name>frontController</servlet-name>-->
+    <!--<url-pattern>/*</url-pattern>-->
+  <!--</servlet-mapping>-->
+
   <!--Servlets-->
 
   <welcome-file-list>

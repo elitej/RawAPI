@@ -1,15 +1,12 @@
-package home.elitej.controller.service;
+package home.elitej.service;
 
 import home.elitej.annotation.Inject;
 import home.elitej.model.entity.Restaurant;
-import home.elitej.model.repository.MockRestaurantRepositoryImpl;
-import home.elitej.model.repository.RestaurantRepository;
+import home.elitej.repository.MockRestaurantRepositoryImpl;
+import home.elitej.repository.RestaurantRepository;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.SortedMap;
-import java.util.concurrent.ConcurrentSkipListMap;
 
 
 public class MockRestaurantServiceImpl implements RestaurantService {

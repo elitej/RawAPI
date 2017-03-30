@@ -1,4 +1,4 @@
-package home.elitej.model.repository;
+package home.elitej.repository;
 
 
 public interface Dao<E>{

@@ -1,4 +1,4 @@
-package home.elitej.controller.service;
+package home.elitej.service;
 
 public interface AbstractService<E> {
 
